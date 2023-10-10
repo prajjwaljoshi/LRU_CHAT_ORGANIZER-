@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>LRU Chat organizer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/5548f5ed00.js" crossorigin="anonymous"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" type="module"></script>
+</head>
+<body>
+    <nav class="navbar navbar-light " style="font-size: 25px; font-family: sans-serif; background-color: whitesmoke;">
+
+        <img src="./images/logo.svg" width="250" height="80"
+             class="d-inline-block align-top" alt="">
+        <div style="margin: auto; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: xx-large; font-weight: 800;"> LRU Cache based chat Organizer</div>
+
+    </nav>
+    <div class="header">
+    <span id="" style="height: 100%;  width: 100%; text-align: center; font-size: large">
+        <span><p style="font-size: x-large; color: rgb(218, 202, 64);">Welcome to Chat Organizer!!! choose the suitable operation</p></span>
+        <span><p> NEW MESSAGE- Enter the Contact Name & message, click on Send Message</p></span>
+        <p>DELETE CHAT - Enter the Contact Name , click on Delete Chat</p>
+    </span>
+</div>
+    <div id="container">
+        
+        <div class="container2">
+            <div class="ks-messenger">
+                <div class="ks-discussions">
+                    <div class="ks-header">
+                <span class="col-4" style="text-align: center">
+                    <i class="fas fa-comments" style="color: white"></i>
+                </span>
+                        <span class="col-4" style="text-align: center">
+                    <i class="fas fa-video" style="color: white"></i>
+                </span>
+                        <span class="col-4" style="text-align: center">
+                    <i class="fas fa-stream" style="color: white"></i>
+                </span>
+                    </div>
+                    <div class="ks-body ks-scrollable jspScrollable" data-auto-height="" style="height: 400px; overflow-y: auto; padding: 0px; width: 339px;" tabindex="0">
+
+                        <div class="jspContainer">
+                            <div class="jspPane" style="padding: 0px; top: 0px; width: 339px;">
+                                <ul class="ks-items" id="chat-list">
+
+                                </ul>
+                            </div>
+                            <div class="jspVerticalBar">
+                                <div class="jspCap jspCapTop"></div>
+                                <div class="jspTrack" style="height: 100px;">
+                                    <div class="jspDrag">
+                                        <div class="jspDragTop"></div>
+                                        <div class="jspDragBottom"></div>
+                                    </div>
+                                </div>
+                                <div class="jspCap jspCapBottom"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container2 " style="overflow-y: scroll; 
+         height: 500px; padding-top: 40px">
+            <span id="temptext" style="height: 100%; width: 100%; text-align: center; font-size: x-large">
+                
+            </span>
+        </div>
+    </div>
+
+    <div class="container3">
+        
+        
+        <div style="margin:auto;">
+            <h4>Send Operation</h1>
+                <input class="mb-2" name="recName" id="recName" required placeholder="Contact Name">
+            <br>
+            <input class="mb-2" name="recMsg" id="recMsg" required placeholder="Message">
+            <br>
+            <button type="button" class="btn btn-success" id="add-message" style="margin: auto">Send Message</button>
+            
+        </div>
+        
+        <div style="margin: auto;">
+            <h4>Delete Operation</h4>
+            <input class="mb-2" name="delName" id="delName" type="text" required placeholder="Contact Name">
+            <br>
+            <button type="button" class="btn btn-danger" id="delete-message" style="margin: auto">Delete Message</button>
+        </div>
+    </div>
+
+    <template>
+        <li class="ks-item" id="ChatListItem">
+            <a href="#">
+            <span class="ks-avatar">
+                <img src="./images/avatar1.png" width="36" height="36" id="Image"></img>
+            </span>
+                <div class="ks-body">
+                    <div class="ks-name">
+                        <span id="Name">Eric George</span>
+                        <span id="Time" class="ks-datetime">just now</span>
+                    </div>
+                    <div class="ks-message" id="Message">Why didn't he come and talk to me himse...</div>
+                </div>
+            </a>
+        </li>
+    </template>
+</body>
+</html>
